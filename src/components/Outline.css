@@ -1,0 +1,11 @@
+.Outline {
+    width: 380px;
+    height: 580px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+    background-image: linear-gradient(rgb(0, 0, 255), #0918c3ad 0%, rgb(106, 111, 215) 74%);
+
+  }

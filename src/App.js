@@ -1,22 +1,25 @@
-import wrapper from "./components/wrapper/wrapper";
-import screen from "./components/screen/screen";
-import buttonBox from "./components/buttonBox/buttonBox";
-import button from "./components/button/button";
+import Wrapper from "./components/Wrapper";
+import Screen from "./components/Screen";
+import ButtonBox from "./components/ButtonBox";
+import React, { useState } from "react";
+import Outline from "./components/Outline";
 
 const App = () => {
+  const [calc, setCalc] = useState({
+    sign: "",
+    num: 0,
+    res: 0,
+  });
+
   return (
-    <Wrapper>
-      <Screen value="0" />
-      <ButtonBox>
-        <Button
-          className=""
-          value="0"
-          onClick={() => {
-            console.log("Button clicked!");
-          }}
-        />
-      </ButtonBox>
-    </Wrapper>
+    <Outline>
+      <Wrapper>
+        <Screen value={calc.num ? calc.num : calc.res} />
+        <ButtonBox calc={calc} setCalc={setCalc}>
+          
+        </ButtonBox>
+      </Wrapper>
+    </Outline>
   );
 };
 
